@@ -1,15 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,address=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <title>加载中...</title>
+    <script>
+      !(function (x) {
+        function w() {
+          var v,
+            u,
+            t,
+            tes,
+            s = x.document,
+            r = s.documentElement,
+            a = r.getBoundingClientRect().width;
+          if (!v && !u) {
+            var n = !!x.navigator.appVersion.match(/AppleWebKit.*Mobile.*/);
+            v = x.devicePixelRatio;
+            tes = x.devicePixelRatio;
+            (v = n ? v : 1), (u = 1 / v);
+          }
+          if (a >= 640) {
+            r.style.fontSize = '40px';
+          } else {
+            if (a <= 320) {
+              r.style.fontSize = '20px';
+            } else {
+              r.style.fontSize = (a / 320) * 20 + 'px';
+            }
+          }
+        }
+        x.addEventListener('resize', function () {
+          w();
+        });
+        w();
+      })(window);
+    </script>
+    <style>
+      .pre-loading {
+        margin-top: 250px;
+      }
+      .pre-loading-hide {
+        display: none;
+      }
+      .pre-loading-img {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        width: 175px;
+        height: 118px;
+      }
+      .pre-loading-text {
+        font-size: 14px;
+        font-weight: 400;
+        color: #666666;
+        text-align: center;
+      }
+    </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <script>
+      function judgeClient() {
+        var client = '';
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+          //判断iPhone|iPad|iPod|iOS
+          client = 'iOS';
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+          //判断Android
+          client = 'Android';
+        } else {
+          client = 'PC';
+        }
+        return client;
+      }
+    </script>
 
-<body>
-    <h1>lego</h1>
-</body>
+    <!-- <script src="//cdn.bootcdn.net/ajax/libs/eruda/2.3.3/eruda.js"></script>
+<script>eruda.init();</script> -->
+  <link href="https://resource.xinmai100.com/xmLego/css/app.5df95bdc.css" rel="stylesheet"></head>
 
+  <body>
+    <div id="modal-root"></div>
+    <div id="app">
+      <div class="pre-loading-hide">
+        <script>
+          if (judgeClient() !== 'PC') {
+            var preLoading = document.querySelector('.pre-loading-hide');
+            preLoading.className = 'pre-loading';
+          }
+        </script>
+        <img class="pre-loading-img" src="./preLoading.png" />
+        <div class="pre-loading-text">努力加载中...</div>
+      </div>
+    </div>
+  <script type="text/javascript" src="https://resource.xinmai100.com/xmLego/js/app.5df95bdc.js"></script></body>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement('script');
+      hm.src = 'https://hm.baidu.com/hm.js?47faf97b4b5987613d3e459681b9e46f';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </html>
