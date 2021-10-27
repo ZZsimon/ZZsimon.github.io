@@ -1,0 +1,60 @@
+/*postcss-pxtransform disable*/
+
+.eventsNone {
+  pointer-events: none;
+}
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+.wxImgButton {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  &:after {
+    border: none;
+  }
+  .wxImg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.imgTpl {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  .image {
+    width: 110px;
+    height: 110px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title {
+    width: 100%;
+    height: 24px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 32px;
+    background-color: $baseColor;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+}
