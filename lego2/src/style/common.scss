@@ -1,0 +1,20 @@
+$baseColor: #00a9ff;
+$baseLightColor: rgba(109, 201, 247, 0.3);
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin selected($color) {
+  width:calc(100% - 2px);
+  height:calc(100% - 2px);
+  border: 1px solid $color;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: "";
+  z-index: 102;
+  opacity: 1;
+}

@@ -1,0 +1,84 @@
+.protocol-wrapper {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.5);
+  z-index: 9;
+  transition: all 0.3s ease-out;
+
+  // .protocol-box.protocol-height {
+  //   top: 70px;
+  // }
+
+  .protocol-box {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 690px;
+    height: 970px;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: #f4f5f9;
+
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      background-color: #fff;
+    }
+
+    .content {
+      height: 760px;
+      box-sizing: border-box;
+      padding: 20px 35px 0 35px;
+      overflow: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      p {
+        font-size: 28px;
+      }
+    }
+
+    .protocol-button {
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 24px;
+      width: 294px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #999999;
+    }
+
+    .protocol-button.active {
+      background: $baseColor;
+    }
+
+    .protocol-bottom-text {
+      font-size: 20px;
+      color: rgba(153, 153, 153, 1);
+      text-align: center;
+    }
+  }
+
+  .close {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    bottom: -88px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}
